@@ -1,0 +1,1 @@
+const array: any[] = [1, '1-1', 0, 'A', false, true]

@@ -1,0 +1,24 @@
+{
+     "compilerOptions": {
+          "target": "ES2020", // Современный JS-вывод
+          "module": "CommonJS", // Подходит для Node.js
+          "outDir": "./dist", // Папка для скомпилированных файлов
+          "rootDir": "./src", // Где лежат исходники
+          "strict": true, // Включает строгую типизацию
+          "esModuleInterop": true, // Позволяет использовать import default from '...'
+          "forceConsistentCasingInFileNames": true, // Убедиться в одинаковом регистре путей
+          "skipLibCheck": true, // Пропустить проверку d.ts файлов
+          "resolveJsonModule": true, // Импортировать JSON-файлы
+          "moduleResolution": "node", // Поиск модулей как в Node.js
+          "types": [
+               "node"
+          ] // Включить типы для Node.js
+     },
+     "include": [
+          "src"
+     ],
+     "exclude": [
+          "node_modules",
+          "dist"
+     ]
+}
