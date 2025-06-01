@@ -12,6 +12,12 @@ npm install --save-dev @types/node
 
 # 4. Инициализировать TypeScript
 npx tsc --init
+
+# 5. Установка nodemon (dev режим)
+npm install -D nodemon
+
+# 6. Запуск проекта
+npm run dev
 ```
 
 ---
@@ -64,6 +70,16 @@ app/
 ├── package.json
 ├── tsconfig.json
 └── nodemon.json
+```
+
+---
+
+## 💻 Скрипты в package.json
+
+```
+"scripts": {
+  "dev": "nodemon"
+}
 ```
 
 ---
