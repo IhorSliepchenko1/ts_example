@@ -1,4 +1,6 @@
-📦 Установка и инициализация проекта
+## 📦 Установка и инициализация проекта
+
+```bash
 # 1. Инициализировать проект
 npm init -y
 
@@ -10,46 +12,50 @@ npm install --save-dev @types/node
 
 # 4. Инициализировать TypeScript
 npx tsc --init
+```
 
+---
 
-⚙️ Настройка tsconfig.json
+## ⚙️ Настройка `tsconfig.json`
 
+```json
 {
-     "compilerOptions": {
-          "target": "ES2020", // Современный JS-вывод
-          "module": "CommonJS", // Подходит для Node.js
-          "outDir": "./dist", // Папка для скомпилированных файлов
-          "rootDir": "./src", // Где лежат исходники
-          "strict": true, // Включает строгую типизацию
-          "esModuleInterop": true, // Позволяет использовать import default from '...'
-          "forceConsistentCasingInFileNames": true, // Убедиться в одинаковом регистре путей
-          "skipLibCheck": true, // Пропустить проверку d.ts файлов
-          "resolveJsonModule": true, // Импортировать JSON-файлы
-          "moduleResolution": "node", // Поиск модулей как в Node.js
-          "types": [
-               "node"
-          ] // Включить типы для Node.js
-     },
-     "include": [
-          "src"
-     ],
-     "exclude": [
-          "node_modules",
-          "dist"
-     ]
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "types": ["node"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
+```
 
+---
 
-🧨 Настройка nodemon
+## 🧨 Настройка `nodemon`
+
+```json
 {
   "watch": ["src"],
   "ext": "ts",
   "ignore": ["dist"],
   "exec": "ts-node-dev ./src/index.ts"
 }
+```
 
+---
 
-📁 Структура проекта
+## 📁 Структура проекта
+
+```
 app/
 ├── src/
 │   └── index.ts
@@ -58,8 +64,14 @@ app/
 ├── package.json
 ├── tsconfig.json
 └── nodemon.json
+```
 
-🧼 .gitignore
+---
+
+## 🧼 .gitignore
+
+```
 node_modules/
 dist/
 .env
+```
